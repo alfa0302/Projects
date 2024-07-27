@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #141a34;
+}
+
+.container {
+  margin: 150px auto 100px;
+  width: 90%;
+  max-width: 500px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px 50px 30px 25px;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+i {
+  top: 0;
+  position: absolute;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form span {
+  font-size: 14px;
+  right: 55px;
+  color: red;
+  position: absolute;
+}
+
+.form div {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form div input {
+  width: 300px;
+  padding: 15px 0;
+  border-style: none;
+  border-bottom: solid rgb(118, 118, 118) 0.1px;
+  margin-left: 15px;
+}
+
+.form div textarea {
+  border-style: none;
+  border-bottom: solid rgb(118, 118, 118) 0.1px;
+  margin-left: 15px;
+
+}
+
+.form div input::placeholder,
+.form div textarea::placeholder {
+  font-size: 14px;
+}
+
+.form div input:focus,
+.form div textarea:focus {
+  outline: none;
+}
+
+.form div label {
+  flex: 1;
+}
+
+.form button {
+  width: 30%;
+  height: 35px;
+  background-color: #141a34;
+  color: white;
+  border-style: none;
+  border-radius: 3px;
+  margin: 15px auto 0;
+}
+
+.error {
+  display: none;
+}
+
+.error i {
+  color: seagreen;
+  padding: 0;
+  right: 5px;
+  top: -10px;
+  font-size: 14px;
+  position: absolute;
+}
