@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+.move-icon {
+  height: 50px;
+}
+.move-button {
+  background: transparent;
+  border: 3px solid white;
+  padding: 30px;
+  border-radius: 65px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.js-result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.move {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.reset-button,
+.autoplay-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
