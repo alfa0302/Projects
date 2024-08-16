@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #201d2e 50%, #c0c0c0 50%)fixed;
+}
+
+.container {
+  max-width: 500px;
+  margin: 100px auto 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header button {
+  width: 100px;
+  height: 40px;
+  background-color: #201d2e;
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.header input {
+  flex: 1;
+  margin-right: 20px;
+  padding: 0 20px;
+}
+
+.text {
+  width: 100%;
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 25px;
+}
