@@ -8,7 +8,14 @@
 }
 
 body {
-  background-color: #9873fe;
+  background-color: hsl(135, 47%, 20%);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 15px;
 }
 
 .wrapper {
@@ -57,8 +64,8 @@ input#amount {
 }
 
 input#amount:focus {
-  color: #9873fe;
-  border-color: #9873fe;
+  color: hsl(135, 47%, 20%);
+  border-color: hsl(135, 47%, 20%);
 }
 
 .dropdowns {
@@ -80,7 +87,7 @@ select {
   background-repeat: no-repeat;
   background-position: right 15px top 50%, center;
   background-size: 20px 20px;
-  background-color: #9873fe;
+  background-color: hsl(135, 47%, 20%);
   color: #ffffff;
 }
 
@@ -94,7 +101,7 @@ select option {
 button {
   font-size: 1em;
   width: 100%;
-  background-color: #9873fe;
+  background-color: hsl(135, 47%, 20%);
   padding: 1em 0;
   margin-top: 2em;
   border-radius: 0.3em;

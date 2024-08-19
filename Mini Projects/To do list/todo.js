@@ -1,62 +1,39 @@
-let tasks = [];
-let listItem = document.querySelector('.add input');
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-document.querySelector('.add button').addEventListener('click', () => {
-  if (!listItem.value) {
-    alert('You must write something!');
+function addTask() {
+  if (inputBox.value === "") {
+    alert("You must write something!");
   } else {
-    const newTask = { text: listItem.value, checked: false };
-    tasks.push(newTask);
-    updateTaskDisplay();
-    saveData();
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
   }
-  listItem.value = '';
-});
-
-function updateTaskDisplay() {
-  const listContainer = document.querySelector('.list');
-  listContainer.innerHTML = ''; // Clear current list
-  tasks.forEach((task, index) => {
-    const listItemHTML = `
-      <div class="listblk" data-index="${index}">
-        <img src="${task.checked ? 'images/checked.png' : 'images/unchecked.png'}" alt="">
-        <div class="list-item"><p class="${task.checked ? 'checked' : ''}">${task.text}</p></div>
-        <button>&#215;</button>
-      </div>`;
-    listContainer.insertAdjacentHTML('beforeend', listItemHTML);//insetead of listItemHTML +=
-  });
-  document.querySelector('.list-display').style.display = tasks.length ? 'block' : 'none'; // Hide if no tasks
+  inputBox.value = "";
+  saveData();
 }
 
-document.querySelector('.list').addEventListener('click', function (e) {
-  const listItemElement = e.target.closest('.listblk');
-  if (listItemElement) {
-    const index = Number(listItemElement.dataset.index);
-    if (index >= 0 && index < tasks.length) { // Ensure index is valid
-      if (e.target.tagName === 'P') {
-        tasks[index].checked = !tasks[index].checked; // Toggle checked state
-        updateTaskDisplay();
-        saveData();
-      } else if (e.target.tagName === 'BUTTON') {
-        tasks.splice(index, 1); // Remove the task from the array
-        updateTaskDisplay();
-        saveData();
-      }
+listContainer.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+      saveData();
+    } else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveData();
     }
-  }
-}, true);
+  },
+  false
+);
 
 function saveData() {
-  localStorage.setItem('tasks', JSON.stringify(tasks)); // Store tasks as JSON
+  localStorage.setItem("data", listContainer.innerHTML);
 }
-
 function showTask() {
-  const savedTasks = JSON.parse(localStorage.getItem('tasks'));
-  if (Array.isArray(savedTasks)) {
-    tasks = savedTasks; // Load saved tasks
-    updateTaskDisplay(); // Update the display
-  }
+  listContainer.innerHTML = localStorage.getItem("data");
 }
-
-// Call showTask when the page loads
-document.addEventListener('DOMContentLoaded', showTask);
+showTask();

@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To do list</title>
-  <link rel="stylesheet" href="todo.css">
-</head>
-<body>
-  <div class="main">
-    <div class="heading">
-      <p>To-Do List</p>
-      <img src="images/icon.png">
-    </div>
-    <div class="add">
-      <input placeholder="Add your text">
-      <button>Add</button>
-    </div>
-    <div class="list list-display">
-      <div class="listblk" id="listblock">
-        <img src="images/unchecked.png" alt="">
-        <div class="list-item"><p class="checked">Make js project</p></div>
-        <button>&#215;</button>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="images/icon.png" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your text" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container"></ul>
       </div>
     </div>
-  </div>
-  <script src="todo.js"></script>
-</body>
+    <script src="todo.js"></script>
+  </body>
 </html>

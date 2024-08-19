@@ -1,6 +1,6 @@
 # Mini Projects Collection
 
-This repository contains a collection of mini projects developed using HTML, CSS, and JavaScript. These projects are designed to help improve and showcase frontend development skills. Below is the list of included projects:
+This repository contains a collection of mini projects developed using HTML, CSS, and JavaScript. Each project reflects my journey in improving and showcasing my frontend development skills. Below is the list of included projects:
 
 ## Projects List
 
@@ -11,7 +11,6 @@ This repository contains a collection of mini projects developed using HTML, CSS
 - Dictionary App
 - Form Validation
 - Horizontal Gallery
-- Internet Speed Detection
 - Jokes Generator
 - Live Character Count
 - Movie Guide App
@@ -28,7 +27,6 @@ This repository contains a collection of mini projects developed using HTML, CSS
 - Rock Paper Scissors
 - Stop Watch
 - Temperature Calculator
-- Text Editor
 - Text Finder
 - Tic Tac Toe
 - To Do List
